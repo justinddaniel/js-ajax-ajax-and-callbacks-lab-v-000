@@ -20,10 +20,10 @@
   </head>
   <body>
     <main id="main">
-       <form id="search-repositories" onsubmit="">
+       <form id="search-repositories" onsubmit="searchRepositories();return false;">
         Search Terms: <input type="text" id="searchTerms">
         <input type="submit">
-      </form> 
+      </form>
       <!-- <a href="#" onclick="searchRepositories();return false">Search Repositories</a> -->
       <div id="errors"></div>
     </main>
