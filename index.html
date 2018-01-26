@@ -30,15 +30,25 @@
     <div class="flexbox-container">
       <div>
         <h3>Repositories</h3>
-        <div id="results"></div>
+        <div id="results">
+          {{#each repositories}}
+          {{name}}
+          {{description}}
+          {{link}}
+          {{image}}
+          <a href="#" onclick="showCommits();return false">Show Commits</a>
+          {{/each}}
+        </div>
       </div>
       <div>
         <h3>Details</h3>
-        <div id="details"></div>
-        {{name}}
-        {{description}}
-        {{link}}
-        {{image}}
+        <div id="details">
+          {{#each commits}}
+          {{SHA}}
+          {{author}}
+          {{login}}
+          {{image}}
+        </div>
       </div>
     </div>
     <script src="jquery-3.1.0.min.js"></script>
